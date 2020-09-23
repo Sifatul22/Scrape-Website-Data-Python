@@ -16,10 +16,11 @@ from random import randint
 titles = []
 urls = []
 
+#pages variable is going to through each pages to scrape the data
 pages = np.arange(1, 37, 1)
 
 for page in pages:
-    source = requests.get('https://dirtbikeplanet.com/?page_num=' + str(page)).text
+    source = requests.get('Use your website URL here' + str(page)).text
     soup = BeautifulSoup(source, 'lxml')
 
     sleep(randint(2,10))
